@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 abstract class AppColor {
   static const backgroundCardColor = Color.fromRGBO(238, 238, 238, 1);
-  static const lightGreenColor = Color.fromARGB(255, 115, 235, 145);
+  static const lightGreenColor = Color.fromARGB(255, 92, 238, 189);
+  static const blueColor = Colors.blue;
   static const whiteColor = Colors.white;
   static const blackColor = Colors.black;
   static final backgroundButtonColor =

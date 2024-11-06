@@ -6,6 +6,7 @@ import 'package:pro_multimedia/domain/home_video/entity/home_video.dart';
 import 'package:pro_multimedia/domain/home_video/service/home_videos_service.dart';
 import 'package:pro_multimedia/infrastructure/core/services/base_api_service.dart';
 import 'package:pro_multimedia/infrastructure/home_video/api/home_video_api.dart';
+import 'package:pro_multimedia/presentation/resource/app_color.dart';
 
 @Injectable(as: HomeVideosService)
 class ApiHomeVideoService extends BaseApiService implements HomeVideosService {
@@ -26,7 +27,7 @@ class ApiHomeVideoService extends BaseApiService implements HomeVideosService {
               name: 'Zaplanuj podróż',
               liked: false,
               homeVideoType: HomeVideoType.small,
-              backgroundColor: Colors.blue),
+              backgroundColor: AppColor.lightGreenColor),
           HomeVideo(
               name: 'Dłuższe godziny zwiedzania muzeum',
               liked: true,
@@ -37,7 +38,7 @@ class ApiHomeVideoService extends BaseApiService implements HomeVideosService {
               name: 'Szlaki',
               liked: false,
               homeVideoType: HomeVideoType.medium,
-              backgroundColor: Colors.blue),
+              backgroundColor: AppColor.blueColor),
           HomeVideo(
               name: 'Dłuższe godziny zwiedzania muzeum',
               liked: false,
