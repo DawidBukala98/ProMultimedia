@@ -7,6 +7,9 @@ import 'package:pro_multimedia/presentation/home/bloc/home_bloc.dart';
 import 'package:pro_multimedia/presentation/resource/app_color.dart';
 import 'package:pro_multimedia/presentation/resource/app_duration.dart';
 import 'package:pro_multimedia/presentation/resource/app_padding.dart';
+import 'package:pro_multimedia/presentation/resource/app_size.dart';
+import 'package:pro_multimedia/presentation/resource/app_spacing.dart';
+import 'package:pro_multimedia/presentation/resource/app_text_style.dart';
 import 'package:video_player/video_player.dart';
 import 'dart:math' as math;
 
@@ -51,13 +54,23 @@ class _HomePageState extends State<HomePage>
                   duration: AppDuration.long,
                   child: AppBar(
                     centerTitle: true,
-                    leading:
-                        IconButton(onPressed: () {}, icon: Icon(Icons.menu)),
-                    title: Text('Logo'),
+                    leading: IconButton(
+                      onPressed: () {},
+                      icon: Icon(Icons.menu),
+                    ),
+                    title: Text(
+                      'Logo',
+                      style: AppTextStyle.appBarFont,
+                    ),
                     actions: [
                       IconButton(
-                          onPressed: () {}, icon: Icon(Icons.favorite_border)),
-                      IconButton(onPressed: () {}, icon: Icon(Icons.search))
+                        onPressed: () {},
+                        icon: Icon(Icons.favorite_border),
+                      ),
+                      IconButton(
+                        onPressed: () {},
+                        icon: Icon(Icons.search),
+                      )
                     ],
                   )),
               VideoCard(),
@@ -75,14 +88,13 @@ class _HomePageState extends State<HomePage>
                               Text(
                                 'Polecane',
                                 textAlign: TextAlign.left,
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 26),
+                                style: AppTextStyle.bigHeader,
                               ),
-                              SizedBox(height: 16),
+                              SizedBox(height: AppSpacing.medium),
                               StaggeredGrid.count(
                                 crossAxisCount: 2,
-                                mainAxisSpacing: 8,
-                                crossAxisSpacing: 8,
+                                mainAxisSpacing: AppSpacing.small,
+                                crossAxisSpacing: AppSpacing.small,
                                 children: List.generate(
                                   bloc.homeVideoList.length,
                                   (index) {
@@ -101,8 +113,10 @@ class _HomePageState extends State<HomePage>
                         child: Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.only(
-                                bottomRight: Radius.circular(100),
-                                bottomLeft: Radius.circular(100)),
+                                bottomRight: Radius.circular(
+                                    AppSize.ovalContainerCornerSize),
+                                bottomLeft: Radius.circular(
+                                    AppSize.ovalContainerCornerSize)),
                             color: AppColor.lightGreenColor,
                             shape: BoxShape.rectangle,
                           ),
@@ -118,7 +132,7 @@ class _HomePageState extends State<HomePage>
                               }
                             },
                             child: Icon(
-                              size: 32,
+                              size: AppSize.smallIconSize,
                               Icons.keyboard_arrow_down_rounded,
                               color: AppColor.whiteColor,
                             ),
@@ -147,7 +161,7 @@ class VideoCard extends StatelessWidget {
       children: [
         AnimatedContainer(
           height: bloc.videoPlayerHeight,
-          duration: Duration(milliseconds: 500),
+          duration: AppDuration.long,
           child: VideoPlayer(bloc.videoPlayerController),
         ),
         Positioned(
@@ -219,10 +233,13 @@ class VideoRecommendationCard extends StatelessWidget {
     return Stack(
       children: [
         Container(
-          height: homeVideo.homeVideoType == HomeVideoType.small ? 80 : 160,
+          height: homeVideo.homeVideoType == HomeVideoType.small
+              ? AppSize.smallCardSize
+              : AppSize.mediumCardSize,
           decoration: BoxDecoration(
               color: homeVideo.backgroundColor,
-              borderRadius: BorderRadius.circular(16),
+              borderRadius:
+                  BorderRadius.circular(AppSize.smallCircularCornerSize),
               image: homeVideo.imageUrl != null
                   ? DecorationImage(
                       fit: BoxFit.cover,
@@ -239,8 +256,10 @@ class VideoRecommendationCard extends StatelessWidget {
                       ? AppColor.backgroundTextColor
                       : null,
                   borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(16),
-                    bottomRight: Radius.circular(16),
+                    bottomLeft:
+                        Radius.circular(AppSize.smallCircularCornerSize),
+                    bottomRight:
+                        Radius.circular(AppSize.smallCircularCornerSize),
                   )),
               width: MediaQuery.of(context).size.width * 0.455,
               child: Padding(
@@ -249,8 +268,7 @@ class VideoRecommendationCard extends StatelessWidget {
                   homeVideo.name,
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
-                      color: AppColor.whiteColor, fontWeight: FontWeight.w700),
+                  style: AppTextStyle.mediumHeader,
                 ),
               ),
             )),
@@ -266,9 +284,11 @@ class VideoRecommendationCard extends StatelessWidget {
                     color: homeVideo.imageUrl == null
                         ? null
                         : AppColor.backgroundButtonColor,
-                    borderRadius: BorderRadius.circular(100),
+                    shape: BoxShape.circle,
                     border: homeVideo.liked
-                        ? Border.all(width: 1, color: AppColor.whiteColor)
+                        ? Border.all(
+                            width: AppSize.smallBorderWidth,
+                            color: AppColor.whiteColor)
                         : null),
                 child: Padding(
                   padding: AppPadding.smallPadding,
