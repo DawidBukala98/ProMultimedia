@@ -4,6 +4,7 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:pro_multimedia/di/di.dart';
 import 'package:pro_multimedia/domain/home_video/entity/home_video.dart';
 import 'package:pro_multimedia/presentation/home/bloc/home_bloc.dart';
+import 'package:pro_multimedia/presentation/home/resource/app_color.dart';
 import 'package:video_player/video_player.dart';
 import 'dart:math' as math;
 
@@ -60,7 +61,7 @@ class _HomePageState extends State<HomePage>
               VideoCard(),
               Expanded(
                 child: Container(
-                  color: Colors.grey[200],
+                  color: AppColor.backgroundCardColor,
                   child: Stack(
                     children: [
                       Padding(
@@ -100,7 +101,7 @@ class _HomePageState extends State<HomePage>
                             borderRadius: BorderRadius.only(
                                 bottomRight: Radius.circular(100),
                                 bottomLeft: Radius.circular(100)),
-                            color: const Color.fromARGB(255, 115, 235, 145),
+                            color: AppColor.lightGreenColor,
                             shape: BoxShape.rectangle,
                           ),
                           height: 36,
@@ -117,7 +118,7 @@ class _HomePageState extends State<HomePage>
                             child: Icon(
                               size: 32,
                               Icons.keyboard_arrow_down_rounded,
-                              color: Colors.white,
+                              color: AppColor.whiteColor,
                             ),
                           ),
                         ),
@@ -152,7 +153,7 @@ class VideoCard extends StatelessWidget {
           left: 16,
           child: ButtonContainer(
             iconData: Icons.menu,
-            iconColor: Colors.black,
+            iconColor: AppColor.blackColor,
             onTap: () {},
           ),
         ),
@@ -161,7 +162,7 @@ class VideoCard extends StatelessWidget {
           right: 56,
           child: ButtonContainer(
             iconData: Icons.favorite_border,
-            iconColor: Colors.black,
+            iconColor: AppColor.blackColor,
             onTap: () {},
           ),
         ),
@@ -170,7 +171,7 @@ class VideoCard extends StatelessWidget {
           right: 8,
           child: ButtonContainer(
             iconData: Icons.search,
-            iconColor: Colors.black,
+            iconColor: AppColor.blackColor,
             onTap: () {},
           ),
         ),
@@ -193,7 +194,7 @@ class ButtonContainer extends StatelessWidget {
           alignment: Alignment.center,
           decoration: BoxDecoration(
             shape: BoxShape.circle,
-            color: Colors.grey[100]?.withOpacity(0.3),
+            color: AppColor.backgroundButtonColor,
           ),
           child: Padding(
             padding: const EdgeInsets.all(6.0),
@@ -233,7 +234,7 @@ class VideoRecommendationCard extends StatelessWidget {
             child: Container(
               decoration: BoxDecoration(
                   color: homeVideo.imageUrl != null
-                      ? Colors.grey[600]?.withOpacity(0.2)
+                      ? AppColor.backgroundTextColor
                       : null,
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(16),
@@ -247,7 +248,7 @@ class VideoRecommendationCard extends StatelessWidget {
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
-                      color: Colors.white, fontWeight: FontWeight.w700),
+                      color: AppColor.whiteColor, fontWeight: FontWeight.w700),
                 ),
               ),
             )),
@@ -262,10 +263,10 @@ class VideoRecommendationCard extends StatelessWidget {
                 decoration: BoxDecoration(
                     color: homeVideo.imageUrl == null
                         ? null
-                        : Colors.grey[100]?.withOpacity(0.3),
+                        : AppColor.backgroundButtonColor,
                     borderRadius: BorderRadius.circular(100),
                     border: homeVideo.liked
-                        ? Border.all(width: 1, color: Colors.white)
+                        ? Border.all(width: 1, color: AppColor.whiteColor)
                         : null),
                 child: Padding(
                   padding: const EdgeInsets.all(6.0),
@@ -274,17 +275,17 @@ class VideoRecommendationCard extends StatelessWidget {
                           angle: 135 * math.pi / 180,
                           child: Icon(
                             Icons.arrow_back_ios,
-                            color: Colors.white,
+                            color: AppColor.whiteColor,
                           ),
                         )
                       : homeVideo.liked
                           ? Icon(
                               Icons.favorite,
-                              color: const Color.fromARGB(255, 115, 235, 145),
+                              color: AppColor.lightGreenColor,
                             )
                           : Icon(
                               Icons.favorite_border,
-                              color: Colors.white,
+                              color: AppColor.whiteColor,
                             ),
                 ),
               ),
