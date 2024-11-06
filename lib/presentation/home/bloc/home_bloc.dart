@@ -1,8 +1,8 @@
 import 'package:bloc/bloc.dart';
 import 'package:injectable/injectable.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:pro_multimedia/domain/home/entity/home_video.dart';
-import 'package:pro_multimedia/domain/home/use_case/get_home_videos_use_case.dart';
+import 'package:pro_multimedia/domain/home_video/entity/home_video.dart';
+import 'package:pro_multimedia/domain/home_video/use_case/get_home_videos_use_case.dart';
 import 'package:video_player/video_player.dart';
 part 'home_event.dart';
 part 'home_state.dart';
@@ -30,9 +30,6 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
             }
           },
         );
-
-        videoPlayerHeight = 200.0;
-        appBarHeight = 0.0;
 
         videoPlayerController.initialize().then((value) {
           videoPlayerController.addListener(() {

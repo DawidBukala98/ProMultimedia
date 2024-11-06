@@ -421,7 +421,6 @@ mixin _$HomeState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() failure,
-    required TResult Function() ready,
     required TResult Function() loading,
     required TResult Function() videoPaused,
     required TResult Function() videoPlaying,
@@ -431,7 +430,6 @@ mixin _$HomeState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? failure,
-    TResult? Function()? ready,
     TResult? Function()? loading,
     TResult? Function()? videoPaused,
     TResult? Function()? videoPlaying,
@@ -441,7 +439,6 @@ mixin _$HomeState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? failure,
-    TResult Function()? ready,
     TResult Function()? loading,
     TResult Function()? videoPaused,
     TResult Function()? videoPlaying,
@@ -452,7 +449,6 @@ mixin _$HomeState {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Failure value) failure,
-    required TResult Function(_Ready value) ready,
     required TResult Function(_Loading value) loading,
     required TResult Function(_VideoPaused value) videoPaused,
     required TResult Function(_VideoPlaying value) videoPlaying,
@@ -462,7 +458,6 @@ mixin _$HomeState {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Failure value)? failure,
-    TResult? Function(_Ready value)? ready,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_VideoPaused value)? videoPaused,
     TResult? Function(_VideoPlaying value)? videoPlaying,
@@ -472,7 +467,6 @@ mixin _$HomeState {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Failure value)? failure,
-    TResult Function(_Ready value)? ready,
     TResult Function(_Loading value)? loading,
     TResult Function(_VideoPaused value)? videoPaused,
     TResult Function(_VideoPlaying value)? videoPlaying,
@@ -544,7 +538,6 @@ class _$InitialImpl implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() failure,
-    required TResult Function() ready,
     required TResult Function() loading,
     required TResult Function() videoPaused,
     required TResult Function() videoPlaying,
@@ -557,7 +550,6 @@ class _$InitialImpl implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? failure,
-    TResult? Function()? ready,
     TResult? Function()? loading,
     TResult? Function()? videoPaused,
     TResult? Function()? videoPlaying,
@@ -570,7 +562,6 @@ class _$InitialImpl implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? failure,
-    TResult Function()? ready,
     TResult Function()? loading,
     TResult Function()? videoPaused,
     TResult Function()? videoPlaying,
@@ -587,7 +578,6 @@ class _$InitialImpl implements _Initial {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Failure value) failure,
-    required TResult Function(_Ready value) ready,
     required TResult Function(_Loading value) loading,
     required TResult Function(_VideoPaused value) videoPaused,
     required TResult Function(_VideoPlaying value) videoPlaying,
@@ -600,7 +590,6 @@ class _$InitialImpl implements _Initial {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Failure value)? failure,
-    TResult? Function(_Ready value)? ready,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_VideoPaused value)? videoPaused,
     TResult? Function(_VideoPlaying value)? videoPlaying,
@@ -613,7 +602,6 @@ class _$InitialImpl implements _Initial {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Failure value)? failure,
-    TResult Function(_Ready value)? ready,
     TResult Function(_Loading value)? loading,
     TResult Function(_VideoPaused value)? videoPaused,
     TResult Function(_VideoPlaying value)? videoPlaying,
@@ -673,7 +661,6 @@ class _$FailureImpl implements _Failure {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() failure,
-    required TResult Function() ready,
     required TResult Function() loading,
     required TResult Function() videoPaused,
     required TResult Function() videoPlaying,
@@ -686,7 +673,6 @@ class _$FailureImpl implements _Failure {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? failure,
-    TResult? Function()? ready,
     TResult? Function()? loading,
     TResult? Function()? videoPaused,
     TResult? Function()? videoPlaying,
@@ -699,7 +685,6 @@ class _$FailureImpl implements _Failure {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? failure,
-    TResult Function()? ready,
     TResult Function()? loading,
     TResult Function()? videoPaused,
     TResult Function()? videoPlaying,
@@ -716,7 +701,6 @@ class _$FailureImpl implements _Failure {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Failure value) failure,
-    required TResult Function(_Ready value) ready,
     required TResult Function(_Loading value) loading,
     required TResult Function(_VideoPaused value) videoPaused,
     required TResult Function(_VideoPlaying value) videoPlaying,
@@ -729,7 +713,6 @@ class _$FailureImpl implements _Failure {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Failure value)? failure,
-    TResult? Function(_Ready value)? ready,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_VideoPaused value)? videoPaused,
     TResult? Function(_VideoPlaying value)? videoPlaying,
@@ -742,7 +725,6 @@ class _$FailureImpl implements _Failure {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Failure value)? failure,
-    TResult Function(_Ready value)? ready,
     TResult Function(_Loading value)? loading,
     TResult Function(_VideoPaused value)? videoPaused,
     TResult Function(_VideoPlaying value)? videoPlaying,
@@ -757,135 +739,6 @@ class _$FailureImpl implements _Failure {
 
 abstract class _Failure implements HomeState {
   const factory _Failure() = _$FailureImpl;
-}
-
-/// @nodoc
-abstract class _$$ReadyImplCopyWith<$Res> {
-  factory _$$ReadyImplCopyWith(
-          _$ReadyImpl value, $Res Function(_$ReadyImpl) then) =
-      __$$ReadyImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$ReadyImplCopyWithImpl<$Res>
-    extends _$HomeStateCopyWithImpl<$Res, _$ReadyImpl>
-    implements _$$ReadyImplCopyWith<$Res> {
-  __$$ReadyImplCopyWithImpl(
-      _$ReadyImpl _value, $Res Function(_$ReadyImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-}
-
-/// @nodoc
-
-class _$ReadyImpl implements _Ready {
-  const _$ReadyImpl();
-
-  @override
-  String toString() {
-    return 'HomeState.ready()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$ReadyImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() failure,
-    required TResult Function() ready,
-    required TResult Function() loading,
-    required TResult Function() videoPaused,
-    required TResult Function() videoPlaying,
-  }) {
-    return ready();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? failure,
-    TResult? Function()? ready,
-    TResult? Function()? loading,
-    TResult? Function()? videoPaused,
-    TResult? Function()? videoPlaying,
-  }) {
-    return ready?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? failure,
-    TResult Function()? ready,
-    TResult Function()? loading,
-    TResult Function()? videoPaused,
-    TResult Function()? videoPlaying,
-    required TResult orElse(),
-  }) {
-    if (ready != null) {
-      return ready();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Failure value) failure,
-    required TResult Function(_Ready value) ready,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_VideoPaused value) videoPaused,
-    required TResult Function(_VideoPlaying value) videoPlaying,
-  }) {
-    return ready(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Failure value)? failure,
-    TResult? Function(_Ready value)? ready,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_VideoPaused value)? videoPaused,
-    TResult? Function(_VideoPlaying value)? videoPlaying,
-  }) {
-    return ready?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Failure value)? failure,
-    TResult Function(_Ready value)? ready,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_VideoPaused value)? videoPaused,
-    TResult Function(_VideoPlaying value)? videoPlaying,
-    required TResult orElse(),
-  }) {
-    if (ready != null) {
-      return ready(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _Ready implements HomeState {
-  const factory _Ready() = _$ReadyImpl;
 }
 
 /// @nodoc
@@ -931,7 +784,6 @@ class _$LoadingImpl implements _Loading {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() failure,
-    required TResult Function() ready,
     required TResult Function() loading,
     required TResult Function() videoPaused,
     required TResult Function() videoPlaying,
@@ -944,7 +796,6 @@ class _$LoadingImpl implements _Loading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? failure,
-    TResult? Function()? ready,
     TResult? Function()? loading,
     TResult? Function()? videoPaused,
     TResult? Function()? videoPlaying,
@@ -957,7 +808,6 @@ class _$LoadingImpl implements _Loading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? failure,
-    TResult Function()? ready,
     TResult Function()? loading,
     TResult Function()? videoPaused,
     TResult Function()? videoPlaying,
@@ -974,7 +824,6 @@ class _$LoadingImpl implements _Loading {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Failure value) failure,
-    required TResult Function(_Ready value) ready,
     required TResult Function(_Loading value) loading,
     required TResult Function(_VideoPaused value) videoPaused,
     required TResult Function(_VideoPlaying value) videoPlaying,
@@ -987,7 +836,6 @@ class _$LoadingImpl implements _Loading {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Failure value)? failure,
-    TResult? Function(_Ready value)? ready,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_VideoPaused value)? videoPaused,
     TResult? Function(_VideoPlaying value)? videoPlaying,
@@ -1000,7 +848,6 @@ class _$LoadingImpl implements _Loading {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Failure value)? failure,
-    TResult Function(_Ready value)? ready,
     TResult Function(_Loading value)? loading,
     TResult Function(_VideoPaused value)? videoPaused,
     TResult Function(_VideoPlaying value)? videoPlaying,
@@ -1060,7 +907,6 @@ class _$VideoPausedImpl implements _VideoPaused {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() failure,
-    required TResult Function() ready,
     required TResult Function() loading,
     required TResult Function() videoPaused,
     required TResult Function() videoPlaying,
@@ -1073,7 +919,6 @@ class _$VideoPausedImpl implements _VideoPaused {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? failure,
-    TResult? Function()? ready,
     TResult? Function()? loading,
     TResult? Function()? videoPaused,
     TResult? Function()? videoPlaying,
@@ -1086,7 +931,6 @@ class _$VideoPausedImpl implements _VideoPaused {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? failure,
-    TResult Function()? ready,
     TResult Function()? loading,
     TResult Function()? videoPaused,
     TResult Function()? videoPlaying,
@@ -1103,7 +947,6 @@ class _$VideoPausedImpl implements _VideoPaused {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Failure value) failure,
-    required TResult Function(_Ready value) ready,
     required TResult Function(_Loading value) loading,
     required TResult Function(_VideoPaused value) videoPaused,
     required TResult Function(_VideoPlaying value) videoPlaying,
@@ -1116,7 +959,6 @@ class _$VideoPausedImpl implements _VideoPaused {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Failure value)? failure,
-    TResult? Function(_Ready value)? ready,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_VideoPaused value)? videoPaused,
     TResult? Function(_VideoPlaying value)? videoPlaying,
@@ -1129,7 +971,6 @@ class _$VideoPausedImpl implements _VideoPaused {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Failure value)? failure,
-    TResult Function(_Ready value)? ready,
     TResult Function(_Loading value)? loading,
     TResult Function(_VideoPaused value)? videoPaused,
     TResult Function(_VideoPlaying value)? videoPlaying,
@@ -1189,7 +1030,6 @@ class _$VideoPlayingImpl implements _VideoPlaying {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() failure,
-    required TResult Function() ready,
     required TResult Function() loading,
     required TResult Function() videoPaused,
     required TResult Function() videoPlaying,
@@ -1202,7 +1042,6 @@ class _$VideoPlayingImpl implements _VideoPlaying {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? failure,
-    TResult? Function()? ready,
     TResult? Function()? loading,
     TResult? Function()? videoPaused,
     TResult? Function()? videoPlaying,
@@ -1215,7 +1054,6 @@ class _$VideoPlayingImpl implements _VideoPlaying {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? failure,
-    TResult Function()? ready,
     TResult Function()? loading,
     TResult Function()? videoPaused,
     TResult Function()? videoPlaying,
@@ -1232,7 +1070,6 @@ class _$VideoPlayingImpl implements _VideoPlaying {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Failure value) failure,
-    required TResult Function(_Ready value) ready,
     required TResult Function(_Loading value) loading,
     required TResult Function(_VideoPaused value) videoPaused,
     required TResult Function(_VideoPlaying value) videoPlaying,
@@ -1245,7 +1082,6 @@ class _$VideoPlayingImpl implements _VideoPlaying {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Failure value)? failure,
-    TResult? Function(_Ready value)? ready,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_VideoPaused value)? videoPaused,
     TResult? Function(_VideoPlaying value)? videoPlaying,
@@ -1258,7 +1094,6 @@ class _$VideoPlayingImpl implements _VideoPlaying {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Failure value)? failure,
-    TResult Function(_Ready value)? ready,
     TResult Function(_Loading value)? loading,
     TResult Function(_VideoPaused value)? videoPaused,
     TResult Function(_VideoPlaying value)? videoPlaying,

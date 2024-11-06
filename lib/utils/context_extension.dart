@@ -3,4 +3,6 @@ import 'package:flutter/material.dart';
 
 extension ContextExtension on BuildContext {
   // AppLocalizations get localizations => AppLocalizations.of(this)!;
+
+  //TODO: add localizations to flutter project
 }

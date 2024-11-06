@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'home_api.dart';
+part of 'home_video_api.dart';
 
 // **************************************************************************
 // RetrofitGenerator
@@ -8,8 +8,8 @@ part of 'home_api.dart';
 
 // ignore_for_file: unnecessary_brace_in_string_interps,no_leading_underscores_for_local_identifiers
 
-class _HomeApi implements HomeApi {
-  _HomeApi(
+class _HomeVideoApi implements HomeVideoApi {
+  _HomeVideoApi(
     this._dio, {
     this.baseUrl,
   });

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:pro_multimedia/di/di.dart';
-import 'package:pro_multimedia/domain/home/entity/home_video.dart';
+import 'package:pro_multimedia/domain/home_video/entity/home_video.dart';
 import 'package:pro_multimedia/presentation/home/bloc/home_bloc.dart';
 import 'package:video_player/video_player.dart';
 import 'dart:math' as math;
