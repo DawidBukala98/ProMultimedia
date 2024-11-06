@@ -27,6 +27,14 @@ class _HomePageState extends State<HomePage>
   }
 
   @override
+  void dispose() {
+    final bloc = getIt<HomeBloc>();
+    bloc.videoPlayerController.dispose();
+    _appBarController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     final bloc = getIt<HomeBloc>()..add(const HomeEvent.started());
     return BlocProvider<HomeBloc>(
