@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
-import 'package:pro_multimedia/core/failure.dart';
-import 'package:pro_multimedia/domain/home_video/entity/home_video.dart';
-import 'package:pro_multimedia/domain/home_video/service/home_videos_service.dart';
+import '../../../core/failure.dart';
+import '../entity/home_video.dart';
+import '../service/home_videos_service.dart';
 
 @injectable
 class GetHomeVideosUseCase {

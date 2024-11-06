@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:pro_multimedia/presentation/resource/app_color.dart';
+import 'app_color.dart';
 
 abstract class AppTextStyle {
   static final appBarFont = TextStyle(

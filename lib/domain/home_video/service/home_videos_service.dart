@@ -1,5 +1,5 @@
 import 'package:dartz/dartz.dart';
-import 'package:pro_multimedia/domain/home_video/entity/home_video.dart';
+import '../entity/home_video.dart';
 
 import '../../../core/failure.dart';
 

@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:pro_multimedia/di/di.dart';
-import 'package:pro_multimedia/domain/home_video/entity/home_video.dart';
-import 'package:pro_multimedia/presentation/home/bloc/home_bloc.dart';
-import 'package:pro_multimedia/presentation/resource/app_color.dart';
-import 'package:pro_multimedia/presentation/resource/app_duration.dart';
-import 'package:pro_multimedia/presentation/resource/app_padding.dart';
-import 'package:pro_multimedia/presentation/resource/app_size.dart';
-import 'package:pro_multimedia/presentation/resource/app_spacing.dart';
-import 'package:pro_multimedia/presentation/resource/app_text_style.dart';
-import 'package:pro_multimedia/utils/context_extension.dart';
+import '../../di/di.dart';
+import '../../domain/home_video/entity/home_video.dart';
+import 'bloc/home_bloc.dart';
+import '../resource/app_color.dart';
+import '../resource/app_duration.dart';
+import '../resource/app_padding.dart';
+import '../resource/app_size.dart';
+import '../resource/app_spacing.dart';
+import '../resource/app_text_style.dart';
+import '../../utils/context_extension.dart';
 import 'package:video_player/video_player.dart';
 import 'dart:math' as math;
 

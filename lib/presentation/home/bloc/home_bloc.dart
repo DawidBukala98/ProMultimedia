@@ -1,9 +1,9 @@
 import 'package:bloc/bloc.dart';
 import 'package:injectable/injectable.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:pro_multimedia/domain/home_video/entity/home_video.dart';
-import 'package:pro_multimedia/domain/home_video/use_case/get_home_videos_use_case.dart';
-import 'package:pro_multimedia/presentation/resource/app_duration.dart';
+import '../../../domain/home_video/entity/home_video.dart';
+import '../../../domain/home_video/use_case/get_home_videos_use_case.dart';
+import '../../resource/app_duration.dart';
 import 'package:video_player/video_player.dart';
 part 'home_event.dart';
 part 'home_state.dart';

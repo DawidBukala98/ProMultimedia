@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:pro_multimedia/infrastructure/home_video/model/home_video_response.dart';
+import '../model/home_video_response.dart';
 import 'package:retrofit/http.dart';
 
 part 'home_video_api.g.dart';

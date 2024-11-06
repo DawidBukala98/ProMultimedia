@@ -1,12 +1,11 @@
 import 'package:dartz/dartz.dart';
-import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
-import 'package:pro_multimedia/core/failure.dart';
-import 'package:pro_multimedia/domain/home_video/entity/home_video.dart';
-import 'package:pro_multimedia/domain/home_video/service/home_videos_service.dart';
-import 'package:pro_multimedia/infrastructure/core/services/base_api_service.dart';
-import 'package:pro_multimedia/infrastructure/home_video/api/home_video_api.dart';
-import 'package:pro_multimedia/presentation/resource/app_color.dart';
+import '../../../core/failure.dart';
+import '../../../domain/home_video/entity/home_video.dart';
+import '../../../domain/home_video/service/home_videos_service.dart';
+import '../../core/services/base_api_service.dart';
+import '../api/home_video_api.dart';
+import '../../../presentation/resource/app_color.dart';
 
 @Injectable(as: HomeVideosService)
 class ApiHomeVideoService extends BaseApiService implements HomeVideosService {

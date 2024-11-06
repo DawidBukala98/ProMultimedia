@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pro_multimedia/di/di.dart';
-import 'package:pro_multimedia/presentation/home/home_page.dart';
+import 'di/di.dart';
+import 'presentation/home/home_page.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 void main() {

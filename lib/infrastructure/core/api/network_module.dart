@@ -1,8 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
-
 import 'package:injectable/injectable.dart';
-import 'package:pro_multimedia/constants/constraints.dart';
+import '../../../constants/constraints.dart';
 
 const mainDioName = "mainDio";
 const baseUrlName = "baseUrl";
