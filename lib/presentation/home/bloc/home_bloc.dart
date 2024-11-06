@@ -3,6 +3,7 @@ import 'package:injectable/injectable.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pro_multimedia/domain/home_video/entity/home_video.dart';
 import 'package:pro_multimedia/domain/home_video/use_case/get_home_videos_use_case.dart';
+import 'package:pro_multimedia/presentation/resource/app_duration.dart';
 import 'package:video_player/video_player.dart';
 part 'home_event.dart';
 part 'home_state.dart';
@@ -53,13 +54,13 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
 
           emit(HomeState.videoPaused());
 
-          Future.delayed(Duration(milliseconds: 500), () {
-            videoPlayerController.seekTo(Duration.zero);
+          Future.delayed(AppDuration.long, () {
+            videoPlayerController.seekTo(AppDuration.zero);
           });
         } else {
           videoPlayerHeight = 200.0;
           appBarHeight = 0.0;
-          videoPlayerController.seekTo(Duration.zero);
+          videoPlayerController.seekTo(AppDuration.zero);
           videoPlayerController.play();
           emit(HomeState.videoPlaying());
         }
@@ -69,8 +70,8 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
         videoPlayerController.pause();
 
         emit(HomeState.videoPaused());
-        Future.delayed(Duration(milliseconds: 500), () {
-          videoPlayerController.seekTo(Duration.zero);
+        Future.delayed(AppDuration.long, () {
+          videoPlayerController.seekTo(AppDuration.zero);
         });
       });
     });

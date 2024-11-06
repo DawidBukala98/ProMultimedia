@@ -4,7 +4,8 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:pro_multimedia/di/di.dart';
 import 'package:pro_multimedia/domain/home_video/entity/home_video.dart';
 import 'package:pro_multimedia/presentation/home/bloc/home_bloc.dart';
-import 'package:pro_multimedia/presentation/home/resource/app_color.dart';
+import 'package:pro_multimedia/presentation/resource/app_color.dart';
+import 'package:pro_multimedia/presentation/resource/app_duration.dart';
 import 'package:video_player/video_player.dart';
 import 'dart:math' as math;
 
@@ -22,7 +23,7 @@ class _HomePageState extends State<HomePage>
   void initState() {
     _appBarController = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 500),
+      duration: AppDuration.long,
     );
     super.initState();
   }
@@ -46,7 +47,7 @@ class _HomePageState extends State<HomePage>
             children: [
               AnimatedContainer(
                   height: bloc.appBarHeight,
-                  duration: Duration(milliseconds: 500),
+                  duration: AppDuration.long,
                   child: AppBar(
                     centerTitle: true,
                     leading:
