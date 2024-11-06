@@ -6,6 +6,7 @@ import 'package:pro_multimedia/domain/home_video/entity/home_video.dart';
 import 'package:pro_multimedia/presentation/home/bloc/home_bloc.dart';
 import 'package:pro_multimedia/presentation/resource/app_color.dart';
 import 'package:pro_multimedia/presentation/resource/app_duration.dart';
+import 'package:pro_multimedia/presentation/resource/app_padding.dart';
 import 'package:video_player/video_player.dart';
 import 'dart:math' as math;
 
@@ -66,7 +67,7 @@ class _HomePageState extends State<HomePage>
                   child: Stack(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.all(12.0),
+                        padding: AppPadding.mediumPadding,
                         child: SingleChildScrollView(
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -198,7 +199,7 @@ class ButtonContainer extends StatelessWidget {
             color: AppColor.backgroundButtonColor,
           ),
           child: Padding(
-            padding: const EdgeInsets.all(6.0),
+            padding: AppPadding.smallPadding,
             child: Icon(
               iconData,
               color: iconColor,
@@ -243,7 +244,7 @@ class VideoRecommendationCard extends StatelessWidget {
                   )),
               width: MediaQuery.of(context).size.width * 0.455,
               child: Padding(
-                padding: const EdgeInsets.all(12.0),
+                padding: AppPadding.mediumPadding,
                 child: Text(
                   homeVideo.name,
                   maxLines: 2,
@@ -270,7 +271,7 @@ class VideoRecommendationCard extends StatelessWidget {
                         ? Border.all(width: 1, color: AppColor.whiteColor)
                         : null),
                 child: Padding(
-                  padding: const EdgeInsets.all(6.0),
+                  padding: AppPadding.smallPadding,
                   child: homeVideo.imageUrl == null
                       ? Transform.rotate(
                           angle: 135 * math.pi / 180,
