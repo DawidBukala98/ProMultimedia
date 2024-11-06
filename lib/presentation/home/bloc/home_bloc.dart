@@ -14,68 +14,62 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   List<HomeVideo> homeVideoList = [];
   double videoPlayerHeight = 200.0;
   double appBarHeight = 0.0;
-  bool videoAlreadyFinished = false;
   final videoPlayerController =
       VideoPlayerController.asset('assets/videos/film.mp4');
   String lastLoggedTime = "";
   HomeBloc(this._getHomeVideosUseCase) : super(const _Initial()) {
     on<HomeEvent>((event, emit) async {
-      await event.when(
-        started: () async {
-          emit(HomeState.loading());
-          final homeVideos = await _getHomeVideosUseCase();
-          homeVideos.fold(
-            (l) => null,
-            (r) {
-              if (r != null) {
-                homeVideoList = r;
-              }
-            },
-          );
+      await event.when(started: () async {
+        emit(HomeState.loading());
+        final homeVideos = await _getHomeVideosUseCase();
+        homeVideos.fold(
+          (l) => null,
+          (r) {
+            if (r != null) {
+              homeVideoList = r;
+            }
+          },
+        );
 
-          videoPlayerHeight = 200.0;
-          appBarHeight = 0.0;
+        videoPlayerHeight = 200.0;
+        appBarHeight = 0.0;
 
+        videoPlayerController.initialize().then((value) {
           videoPlayerController.addListener(() {
-            // if (videoPlayerController.value.isCompleted &&
-            //     lastLoggedTime !=
-            //         videoPlayerController.value.position.inSeconds.toString()) {
-            //   lastLoggedTime =
-            //       videoPlayerController.value.position.inSeconds.toString();
-            //   add(HomeEvent.changeVideoStatus());
-            // }
-
-            if (videoPlayerController.value.isCompleted &&
-                !videoAlreadyFinished) {
-              videoPlayerController.pause();
-              videoPlayerController.seekTo(Duration.zero);
-              videoAlreadyFinished = true;
-              add(HomeEvent.changeVideoStatus());
+            if (!videoPlayerController.value.isPlaying &&
+                videoPlayerController.value.isInitialized &&
+                (videoPlayerController.value.duration ==
+                    videoPlayerController.value.position)) {
+              add(HomeEvent.videoFinished());
             }
           });
-          videoPlayerController
-              .initialize()
-              .then((value) => videoPlayerController.play());
+          videoPlayerController.play();
+        });
 
+        emit(HomeState.videoPlaying());
+      }, changeVideoStatus: () {
+        if (state == HomeState.videoPlaying()) {
+          videoPlayerHeight = 0;
+          appBarHeight = 116.0;
+
+          videoPlayerController.pause();
+          videoPlayerController.seekTo(Duration.zero);
+
+          emit(HomeState.videoPaused());
+        } else {
+          videoPlayerHeight = 200.0;
+          appBarHeight = 0.0;
+          videoPlayerController.seekTo(Duration.zero);
+          videoPlayerController.play();
           emit(HomeState.videoPlaying());
-        },
-        changeVideoStatus: () {
-          if (state == HomeState.videoPlaying()) {
-            videoPlayerHeight = 0;
-            appBarHeight = 116.0;
-            videoPlayerController.pause();
-            lastLoggedTime = "";
-            emit(HomeState.videoPaused());
-          } else {
-            videoAlreadyFinished = false;
-            videoPlayerHeight = 200.0;
-            appBarHeight = 0.0;
-            videoPlayerController.seekTo(Duration.zero);
-            videoPlayerController.play();
-            emit(HomeState.videoPlaying());
-          }
-        },
-      );
+        }
+      }, videoFinished: () {
+        videoPlayerHeight = 0;
+        appBarHeight = 116.0;
+        videoPlayerController.pause();
+        videoPlayerController.seekTo(Duration.zero);
+        emit(HomeState.videoPaused());
+      });
     });
   }
 }

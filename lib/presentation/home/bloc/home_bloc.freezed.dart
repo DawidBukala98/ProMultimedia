@@ -20,18 +20,21 @@ mixin _$HomeEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() changeVideoStatus,
+    required TResult Function() videoFinished,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? changeVideoStatus,
+    TResult? Function()? videoFinished,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? changeVideoStatus,
+    TResult Function()? videoFinished,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -39,18 +42,21 @@ mixin _$HomeEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_ChangeVideoStatus value) changeVideoStatus,
+    required TResult Function(_VideoFinished value) videoFinished,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_ChangeVideoStatus value)? changeVideoStatus,
+    TResult? Function(_VideoFinished value)? videoFinished,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_ChangeVideoStatus value)? changeVideoStatus,
+    TResult Function(_VideoFinished value)? videoFinished,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -119,6 +125,7 @@ class _$StartedImpl implements _Started {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() changeVideoStatus,
+    required TResult Function() videoFinished,
   }) {
     return started();
   }
@@ -128,6 +135,7 @@ class _$StartedImpl implements _Started {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? changeVideoStatus,
+    TResult? Function()? videoFinished,
   }) {
     return started?.call();
   }
@@ -137,6 +145,7 @@ class _$StartedImpl implements _Started {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? changeVideoStatus,
+    TResult Function()? videoFinished,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -150,6 +159,7 @@ class _$StartedImpl implements _Started {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_ChangeVideoStatus value) changeVideoStatus,
+    required TResult Function(_VideoFinished value) videoFinished,
   }) {
     return started(this);
   }
@@ -159,6 +169,7 @@ class _$StartedImpl implements _Started {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_ChangeVideoStatus value)? changeVideoStatus,
+    TResult? Function(_VideoFinished value)? videoFinished,
   }) {
     return started?.call(this);
   }
@@ -168,6 +179,7 @@ class _$StartedImpl implements _Started {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_ChangeVideoStatus value)? changeVideoStatus,
+    TResult Function(_VideoFinished value)? videoFinished,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -224,6 +236,7 @@ class _$ChangeVideoStatusImpl implements _ChangeVideoStatus {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() changeVideoStatus,
+    required TResult Function() videoFinished,
   }) {
     return changeVideoStatus();
   }
@@ -233,6 +246,7 @@ class _$ChangeVideoStatusImpl implements _ChangeVideoStatus {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? changeVideoStatus,
+    TResult? Function()? videoFinished,
   }) {
     return changeVideoStatus?.call();
   }
@@ -242,6 +256,7 @@ class _$ChangeVideoStatusImpl implements _ChangeVideoStatus {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? changeVideoStatus,
+    TResult Function()? videoFinished,
     required TResult orElse(),
   }) {
     if (changeVideoStatus != null) {
@@ -255,6 +270,7 @@ class _$ChangeVideoStatusImpl implements _ChangeVideoStatus {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_ChangeVideoStatus value) changeVideoStatus,
+    required TResult Function(_VideoFinished value) videoFinished,
   }) {
     return changeVideoStatus(this);
   }
@@ -264,6 +280,7 @@ class _$ChangeVideoStatusImpl implements _ChangeVideoStatus {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_ChangeVideoStatus value)? changeVideoStatus,
+    TResult? Function(_VideoFinished value)? videoFinished,
   }) {
     return changeVideoStatus?.call(this);
   }
@@ -273,6 +290,7 @@ class _$ChangeVideoStatusImpl implements _ChangeVideoStatus {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_ChangeVideoStatus value)? changeVideoStatus,
+    TResult Function(_VideoFinished value)? videoFinished,
     required TResult orElse(),
   }) {
     if (changeVideoStatus != null) {
@@ -284,6 +302,117 @@ class _$ChangeVideoStatusImpl implements _ChangeVideoStatus {
 
 abstract class _ChangeVideoStatus implements HomeEvent {
   const factory _ChangeVideoStatus() = _$ChangeVideoStatusImpl;
+}
+
+/// @nodoc
+abstract class _$$VideoFinishedImplCopyWith<$Res> {
+  factory _$$VideoFinishedImplCopyWith(
+          _$VideoFinishedImpl value, $Res Function(_$VideoFinishedImpl) then) =
+      __$$VideoFinishedImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$VideoFinishedImplCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$VideoFinishedImpl>
+    implements _$$VideoFinishedImplCopyWith<$Res> {
+  __$$VideoFinishedImplCopyWithImpl(
+      _$VideoFinishedImpl _value, $Res Function(_$VideoFinishedImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of HomeEvent
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$VideoFinishedImpl implements _VideoFinished {
+  const _$VideoFinishedImpl();
+
+  @override
+  String toString() {
+    return 'HomeEvent.videoFinished()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$VideoFinishedImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() changeVideoStatus,
+    required TResult Function() videoFinished,
+  }) {
+    return videoFinished();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? changeVideoStatus,
+    TResult? Function()? videoFinished,
+  }) {
+    return videoFinished?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? changeVideoStatus,
+    TResult Function()? videoFinished,
+    required TResult orElse(),
+  }) {
+    if (videoFinished != null) {
+      return videoFinished();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_ChangeVideoStatus value) changeVideoStatus,
+    required TResult Function(_VideoFinished value) videoFinished,
+  }) {
+    return videoFinished(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_ChangeVideoStatus value)? changeVideoStatus,
+    TResult? Function(_VideoFinished value)? videoFinished,
+  }) {
+    return videoFinished?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_ChangeVideoStatus value)? changeVideoStatus,
+    TResult Function(_VideoFinished value)? videoFinished,
+    required TResult orElse(),
+  }) {
+    if (videoFinished != null) {
+      return videoFinished(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _VideoFinished implements HomeEvent {
+  const factory _VideoFinished() = _$VideoFinishedImpl;
 }
 
 /// @nodoc
