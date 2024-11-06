@@ -53,9 +53,12 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
           appBarHeight = 116.0;
 
           videoPlayerController.pause();
-          videoPlayerController.seekTo(Duration.zero);
 
           emit(HomeState.videoPaused());
+
+          Future.delayed(Duration(milliseconds: 500), () {
+            videoPlayerController.seekTo(Duration.zero);
+          });
         } else {
           videoPlayerHeight = 200.0;
           appBarHeight = 0.0;
@@ -67,8 +70,11 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
         videoPlayerHeight = 0;
         appBarHeight = 116.0;
         videoPlayerController.pause();
-        videoPlayerController.seekTo(Duration.zero);
+
         emit(HomeState.videoPaused());
+        Future.delayed(Duration(milliseconds: 500), () {
+          videoPlayerController.seekTo(Duration.zero);
+        });
       });
     });
   }
