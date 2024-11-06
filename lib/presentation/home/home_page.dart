@@ -10,6 +10,7 @@ import 'package:pro_multimedia/presentation/resource/app_padding.dart';
 import 'package:pro_multimedia/presentation/resource/app_size.dart';
 import 'package:pro_multimedia/presentation/resource/app_spacing.dart';
 import 'package:pro_multimedia/presentation/resource/app_text_style.dart';
+import 'package:pro_multimedia/utils/context_extension.dart';
 import 'package:video_player/video_player.dart';
 import 'dart:math' as math;
 
@@ -59,7 +60,7 @@ class _HomePageState extends State<HomePage>
                       icon: Icon(Icons.menu),
                     ),
                     title: Text(
-                      'Logo',
+                      context.localizations.logo,
                       style: AppTextStyle.appBarFont,
                     ),
                     actions: [
@@ -86,7 +87,7 @@ class _HomePageState extends State<HomePage>
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Polecane',
+                                context.localizations.recommendations,
                                 textAlign: TextAlign.left,
                                 style: AppTextStyle.bigHeader,
                               ),
